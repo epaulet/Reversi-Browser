@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reversi</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href="./css/reversi.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Reversi</h1>
+    <div class="reversi">
+      <div class="reversi-board clearfix"></div>
+      <div class="reversi-messages"></div>
+    </div>
+
+    <script src="./js/reversi/reversi-core.js"></script>
+    <script src="./js/reversi-view.js"></script>
+    <script>
+      $(function() {
+        $('.reversi').reversi();
+      });
+    </script>
+  </body>
+</html>

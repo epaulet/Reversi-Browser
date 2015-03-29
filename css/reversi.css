@@ -1,0 +1,41 @@
+body {
+  margin-top: -10px;
+}
+
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.reversi {
+  width: 536px;
+  margin: 0 auto;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  float: left;
+  background-color: green;
+  margin: 2px;
+}
+
+.square.black {
+  background-color: black;
+}
+
+.square.white {
+  background-color: white;
+}
+
+.reversi-board {
+  background-color: black;
+  padding: 2px;
+  border: solid 10px #B48D51;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
