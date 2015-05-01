@@ -7,9 +7,20 @@ body * {
   width: inherit;
 }
 
-h1 {
-  text-align: center;
+.reversi-title, .directions {
   font-family: sans-serif;
+  text-align: center;
+}
+
+.directions-button {
+  height: 30px;
+  width: 150px;
+  display: block;
+  margin: 15px auto;
+}
+
+.directions {
+  padding-bottom: 10px;
 }
 
 .reversi {
