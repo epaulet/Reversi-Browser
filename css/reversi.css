@@ -7,6 +7,10 @@ body * {
   width: inherit;
 }
 
+.hidden {
+  display: none;
+}
+
 .reversi-title, .directions {
   font-family: sans-serif;
   text-align: center;

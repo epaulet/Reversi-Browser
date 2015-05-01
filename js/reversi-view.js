@@ -5,7 +5,6 @@ $.Reversi = function (el) {
   this.$messages = this.$el.find('.reversi-messages');
   this.$directionsButton = this.$el.find('.directions-button');
   this.$directionsContainer = this.$el.find('.directions');
-  this.directions = false;
   this.turn = 'black';
 
   this.makeBoard();
@@ -47,7 +46,9 @@ $.Reversi.prototype.render = function () {
 
 $.Reversi.prototype.registerEvents = function () {
   this.$board.on('click', '.square', this.makeMove.bind(this));
-  this.$directionsButton.on('click', this.toggleDirections.bind(this));
+  this.$directionsButton.on('click', function () {
+    this.$directionsContainer.toggleClass('hidden');
+  }.bind(this));
 };
 
 $.Reversi.prototype.makeMove = function (event) {
@@ -73,18 +74,6 @@ $.Reversi.endGame = function () {
 $.Reversi.prototype.switchTurn = function () {
   this.turn = this.turn === "black" ? "white" : "black";
 };
-
-$.Reversi.prototype.toggleDirections = function () {
-  if (this.directions) {
-    this.$directionsContainer.empty();
-  } else {
-    var directions = "Flank series of your opponents disc on both sides to flip them to your color!<br><br>Win by either making your opponent run out of moves or filling the board with more discs than your opponent.";
-      this.$directionsContainer.html(directions);
-  }
-
-  this.directions = !this.directions;
-};
-
 
 $.fn.reversi = function () {
   return this.each(function () {
